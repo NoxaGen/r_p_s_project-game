@@ -329,14 +329,6 @@ const clearBattle = () => {
 
 const theWinnerIs = () => {
 
-    // switch (whoIsWinning.textContent) {
-    //     case winGamesCounter > lostGamesCounter:
-    //         "Gracz";
-    //         break;
-
-    //     case winGamesCounter < lostGamesCounter:
-    //         whoIsWinning.textContent = "Komputer";
-    //         break;
 
 
     if (gamesCounter === 0) {
@@ -353,35 +345,10 @@ const theWinnerIs = () => {
     }
 
 
-    // if (matchOver = true) {
-    //     starterBtn.disabled = true;
-    // } else {
-    //     starterBtn.disabled = false;
-    // }
+
 }
 starterBtn.addEventListener('click', playGame);
 
 resBtn.addEventListener('click', clearBattle);
 
 theWinnerIs()
-
-
-
-// if (clickCheck == false) {
-//     starterBtn.disabled = true;
-// }
-// if (clickCheck == true) {
-//     starterBtn.disabled = false;
-
-// document.body.addEventListener('touchstart', function (e) {
-//     e.preventDefault();
-// });
-
-// window.addEventListener("scroll", preventMotion, false);
-// window.addEventListener("touchmove", preventMotion, false);
-
-// function preventMotion(event) {
-//     window.scrollTo(0, 0);
-//     event.preventDefault();
-//     event.stopPropagation();
-// }
