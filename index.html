@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+    <title>Papier kamień nożyczki!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/b421c2a6df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <i class="fas fa-solid fa-dice"></i>   kostka do gry -->
+    <!-- <i class="fas fa-grin-beam"></i>   smile icon do title -->
+    <!-- Montserrat - czcionka globalna -->
+
+    <!-- Projekt zrobiony w 100% samodzielnie, jeden z pierwszych projektów w których
+    użyłem CSS, HTML oraz JS w pełni responsywny na wszystkich urządzeniach.
+
+    Projekt będę się starał uploadować, ponieważ wiem, że w ciągu najbliżych 
+    dni/tygodni poznam lepsze i bardziej optymalne rozwiązania, lecz moim zdaniem
+    projekty powinny być wykonane samodzielnie a nie kopiowane, gdyż mija się to z celem :) -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>GRA: KAMIEŃ, PAPIER, NOŻYCZKI</h1>
+        <h2>Zaznacz swój wybór i naciśnij GRAJ - miłej zabawy <i class="fas fa-grin-beam"></i></h2>
+
+
+        <section class="hands">
+            <div class="rock"></div>
+            <div class="paper"></div>
+            <div class="scissors"></div>
+        </section>
+        <button class="play">GRAJ <i class="fas fa-solid fa-dice"></i></button>
+        <section class="battle">
+            <div class="grass"></div>
+            <div class="playerRock"></div>
+            <div class="playerPaper"></div>
+            <div class="playerScissors"></div>
+            <div class="computerRock"></div>
+            <div class="computerPaper"></div>
+            <div class="computerScissors"></div>
+            <div class="playerCrownSpot"></div>
+            <div class="computerCrownSpot"></div>
+            <div class="cpuWins"></div>
+            <div class="playerWins"></div>
+            <p class="drawSign">Remis!</p>
+            <button class="restart">RESET<i class="fas fa-undo"></i></button>
+            <p class="playerTitle">Gracz</p>
+            <p class="computerTitle">Komputer</p>
+    </div>
+
+    </section>
+    <!-- <div class="results"></div> -->
+    <section class="statistics">
+        <h1>TABLICA WYNIKÓW:</h1>
+        <div class="summary">
+            <p>Obecnie prowadzi: <span>-</span></p>
+            <p>Rozegrane starcia: <span>0</span></p>
+            <p>Twoje wygrane: <span>0</span> </p>
+            <p>Wygrane komputera: <span>0</span> </p>
+            <p>Remisy: <span>0</span></p>
+        </div>
+    </section>
+
+    </div>
+    <div class="aboutMe"> <a href=#>Wiktor Augustyniak - Copyright Ⓒ 2022 Noxagen Development. All
+            Rights Reserved.</a></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

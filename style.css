@@ -1,0 +1,1074 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    z-index: 200;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 234, 0);
+
+    /* min-width: 1024px;
+    max-width: 1024px; */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    /* padding: 10px; */
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px 15px 25px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    cursor: pointer;
+    width: 80px;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: white;
+    border: 5px solid rgba(0, 0, 0, 0.733);
+    border-radius: 10%;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    transition: 0.3s linear;
+    z-index: 115;
+}
+
+button:hover {
+    background-color: white;
+    /* transition: 0.3s linear; */
+    /* width: 300px; */
+    /* box-shadow: 0px 0px 5px 5px black; */
+    /* color: teal; */
+    /* font-size: 1.5em; */
+    background-color: teal;
+
+
+
+}
+
+button:hover .fa-dice {
+    animation-name: movingChoice;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.hands {
+
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+    align-content: space-around;
+    justify-content: center;
+    z-index: 9999;
+    width: 1024px;
+
+
+}
+
+.rock,
+.paper,
+.scissors {
+    width: 30%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s linear;
+
+    border-radius: 10 10 10 10;
+
+
+}
+
+
+
+
+
+.rock {
+    background-image: url(../r_p_s_project-game/images/rock_unselected_good.png);
+    transition: 1s;
+}
+
+.paper {
+    background-image: url(../r_p_s_project-game/images/paper_unselected_good.png);
+    transition: 1s;
+}
+
+.scissors {
+    background-image: url(../r_p_s_project-game/images/scissors_unselected_good.png);
+    transition: 1s;
+}
+
+.rock:hover {
+    background-image: url(../r_p_s_project-game/images/rock_selected_good.png)
+        /* width: 40%; */
+        /* flex-grow: 1; */
+}
+
+
+.paper:hover {
+    background-image: url(../r_p_s_project-game/images/paper_selected_good.png);
+    /* width: 40%; */
+    /* flex-grow: 1; */
+
+}
+
+.scissors:hover {
+    background-image: url(../r_p_s_project-game/images/scissors_selected_good.png);
+    /* width: 40%; */
+    /* flex-grow: 1; */
+}
+
+.battle {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    /* margin-top: 5px; */
+    width: 100%;
+    height: 220px;
+    /* background-color: skyblue; */
+    z-index: 99199;
+    overflow: hidden;
+    /* border: solid 8px black; */
+    background-image: url(../r_p_s_project-game/images/background_battle_desktop.jpg);
+    background-repeat: none;
+    background-position: center;
+
+}
+
+/* podpisy stron, w malych testach user nie wiedzial ktora strona czyja */
+
+p.playerTitle,
+p.computerTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    padding: 3px;
+    position: absolute;
+}
+
+p.playerTitle {
+    color: blue;
+    left: 1%;
+    top: 0%;
+}
+
+p.computerTitle {
+    color: red;
+    right: 1%;
+    top: 0%;
+}
+
+.computerRock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 120%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/rock_cpu.png);
+    z-index: 104;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.computerPaper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 105%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/paper_cpu.png);
+    z-index: 103;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.computerScissors {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 135%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/scissors_cpu.png);
+    z-index: 103;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.playerRock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -55%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/rock_player.png);
+    z-index: 104;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.playerPaper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/paper_player.png);
+    z-index: 104;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.playerScissors {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+    top: 20%;
+    background-image: url(../r_p_s_project-game/images/scissors_player.png);
+    z-index: 104;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    transition: 2s;
+}
+
+.computerActive {
+    transform: translate(+5%);
+    left: 50%;
+}
+
+.playerActive {
+    left: 50%;
+    transform: translate(-20%);
+}
+
+.aboutMe {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background-color: black;
+    z-index: 200;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 234, 0);
+    text-align: center;
+}
+
+.statistics {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 220px);
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    line-height: 1.5;
+
+}
+
+.statistics p {
+    font-size: 0.9rem;
+}
+
+.statistics h1 {
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+/* .summary{
+    
+} */
+
+
+
+.aboutMe>a {
+    color: rgb(255, 234, 0);
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+
+.clickedRock {
+    background-image: url(../r_p_s_project-game/images/rock_selected_good.png);
+    animation-name: movingChoice;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: 85%;
+
+}
+
+.clickedPaper {
+    background-image: url(../r_p_s_project-game/images/paper_selected_good.png);
+    animation-name: movingChoice;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: 85%;
+
+
+
+}
+
+.clickedScissors {
+    background-image: url(../r_p_s_project-game/images/scissors_selected_good.png);
+    animation-name: movingChoice;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: 85%;
+
+}
+
+@keyframes movingChoice {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    3% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(10deg)
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    97% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+
+    ;
+}
+
+@keyframes movingRound {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    12.5% {
+        transform: rotate(-45deg);
+    }
+
+    25% {
+        transform: rotate(-90deg)
+    }
+
+    37.5% {
+        transform: rotate(-135deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    62.5% {
+        transform: rotate(-225);
+    }
+
+    75% {
+        transform: rotate(-270deg);
+    }
+
+    87.5% {
+        transform: rotate(-305deg);
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+
+    ;
+}
+
+.playerCrownSpot,
+.computerCrownSpot {
+
+    height: 0px;
+    transition: 3s;
+}
+
+
+.cpuWinsShow {
+    position: absolute;
+    background-image: url(../r_p_s_project-game/images/3508754.png);
+    background-size: 50px;
+    top: 5%;
+    left: 60%;
+    z-index: 110;
+    width: 50px;
+    height: 50px;
+    transition: 3s;
+
+
+}
+
+.playerWinsShow {
+    position: absolute;
+    background-image: url(../r_p_s_project-game/images/3508754.png);
+    background-size: 50px;
+    top: 5%;
+    left: 35%;
+    z-index: 110;
+    width: 50px;
+    height: 50px;
+    transition: 3s;
+
+}
+
+.restart {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 2%);
+
+    transition: 1s linear;
+
+
+}
+
+.restartActive {
+    top: 5%;
+
+
+}
+
+button:hover .fa-undo {
+    animation-name: movingRound;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.drawSign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(111, 0, 255);
+    font-size: 0px;
+    transition: 3s;
+
+
+}
+
+.drawSignActive {
+    font-size: 20px;
+    /* animation: movingChoice infinite linear 1s; */
+
+}
+
+/* Layout budowany od large-screen do small devices
+Media-Queries */
+
+/* @media (max-width: 1024px) {} layout zachowuje sie dosc przyjemnie, narazie bez zmian */
+
+@media (orientation: portrait) {
+    h1 {
+        margin-top: 10px
+    }
+
+
+    .battle {
+
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 80%;
+        background-image: url(../r_p_s_project-game/images/backgroundTest1024x1366.jpg);
+
+    }
+
+    .statistics {
+        position: absolute;
+        top: 45vh;
+
+        font-size: 20px;
+
+    }
+
+    .playerActive {
+        transform: translate(-25%)
+    }
+
+    .computerActive {
+        transform: translate(6%)
+    }
+
+    .aboutMe {
+        width: 100%;
+    }
+}
+
+
+
+@media(min-width: 769px)and (max-width: 1024px) and (orientation: portrait) {
+
+
+
+
+
+    .hands {
+        height: 240px;
+        width: 100vw;
+        transform: translate(0, 15%) scale(100%);
+    }
+
+    /* .aboutMe {
+        width: 100%;
+        bottom: 0%;
+        left: 0%;
+
+    } */
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    h1,
+    h2 {
+        transform: scale(80%);
+    }
+
+    .play {
+        transform: translate(0, 100%);
+    }
+
+    .battle {
+        width: 80%;
+    }
+
+    .playerActive {
+        transform: translate(-27%);
+    }
+
+    .computerActive {
+        transform: translate(10%);
+    }
+}
+
+.playerWinsShow {
+
+
+    left: 30%;
+
+
+}
+
+.cpuWinsShow {
+    transform: translate(100%);
+}
+
+.statistics {
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+@media(min-width: 769px)and (max-width: 1024px) and (orientation: landscape) {
+
+
+
+
+
+    .hands {
+
+        transform: translate(0%, -20%)scale(80%);
+
+    }
+
+    .play {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%) scale(70%);
+    }
+
+
+
+    h1,
+    h2 {
+        transform: scale(50%);
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    h2 {
+        top: 0px
+    }
+
+    body {
+        position: relative;
+    }
+
+
+    .battle {
+
+        background-image: url(../r_p_s_project-game/images/backgroundTest_1024x768_landscape.jpg);
+        position: absolute;
+        top: 55vh;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        width: 800px;
+
+    }
+
+    .restart {
+        transform: translate(-50%) scale(80%);
+
+    }
+
+    .playerActive {
+        transform: translate(-30%) scale(80%);
+    }
+
+    .computerActive {
+        transform: translate(-5%) scale(80%);
+    }
+
+    .statistics {
+        font-size: 0.8rem;
+        top: 300px;
+    }
+
+
+
+    .aboutMe a {
+        font-size: 0.8rem;
+    }
+
+    .aboutMe {
+        height: 20px;
+        line-height: 1rem;
+    }
+
+    .playerCrownSpot {
+        transform: translate(50%, 10%) scale(80%);
+    }
+
+    .computerCrownSpot {
+        transform: translate(40%, 10%) scale(80%);
+
+    }
+
+}
+
+@media(min-width: 481px)and (max-width: 768px)and (orientation: portrait) {
+
+
+
+    h1,
+    h2 {
+        transform: scale(40%);
+        display: inline-block;
+        width: 100vw;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+
+    }
+
+    .hands {
+
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%) scale(80%);
+
+    }
+
+    .play {
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%) scale(80%);
+    }
+
+    .battle {
+        background-image: url(../r_p_s_project-game/images/background_battle_768x1024.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        transform: translate(-50%, -20%) scale(80%);
+        width: 100%;
+    }
+
+    .statistics {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translate(-50%) scale(90%);
+    }
+
+    .playerActive {
+        transform: translate(-27%);
+    }
+
+    .computerActive {
+        transform: translate(8%);
+    }
+
+    .computerCrownSpot {
+        transform: translate(80%);
+    }
+
+    .playerCrownSpot {
+        transform: translate(-130%);
+    }
+
+
+
+}
+
+
+@media(min-width: 481px)and (max-width: 768px)and (orientation: landscape) {
+
+    /* h1 {
+        text-align: left;
+        float: left;
+    } */
+
+    h1,
+    h2 {
+        transform: scale(40%);
+        display: inline-block;
+        width: 100vw;
+    }
+
+    h2 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+
+    }
+
+    .hands {
+
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+
+    }
+
+    .play {
+        position: absolute;
+        top: 170px;
+        left: 24.5%;
+        transform: scale(50%);
+    }
+
+    .battle {
+        position: absolute;
+        top: 175px;
+        left: -19%;
+        transform: scale(50%);
+        width: 100%;
+    }
+
+    .statistics {
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+        transform: translate(-50%);
+        font-size: 0.8rem;
+    }
+
+    .playerActive {
+        transform: translate(-35%);
+    }
+
+    .computerActive {
+        transform: translate(8%);
+    }
+
+    .computerCrownSpot {
+        transform: translate(80%);
+    }
+
+    .playerCrownSpot {
+        transform: translate(-130%);
+    }
+
+
+
+
+    .aboutMe {
+        position: absolute;
+        bottom: -10%;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        height: 15px;
+        line-height: 10px;
+
+    }
+
+
+    .aboutMe a {
+        font-size: 10px;
+
+    }
+
+    body {
+        max-width: 640px;
+    }
+}
+
+/* zapytanie do iphone-x itp */
+
+@media(min-width: 769px)and (max-width: 1024px) and (max-device-height: 375px) and (orientation: landscape) {
+
+
+
+    h1,
+    h2 {
+        transform: scale(40%);
+        display: inline-block;
+        width: 100vw;
+    }
+
+    h2 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+
+    }
+
+
+
+    .hands {
+
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+
+    }
+
+    .play {
+        position: absolute;
+        top: 170px;
+        left: 24.5%;
+        transform: scale(50%);
+    }
+
+    .battle {
+        position: absolute;
+        top: 175px;
+        left: -19%;
+        transform: scale(45%);
+        width: 100%;
+    }
+
+    .statistics {
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+        transform: translate(-50%);
+        font-size: 0.8rem;
+    }
+
+    .playerActive {
+        transform: translate(-35%);
+    }
+
+    .computerActive {
+        transform: translate(8%);
+    }
+
+    .computerCrownSpot {
+        transform: translate(80%);
+    }
+
+    .playerCrownSpot {
+        transform: translate(-130%);
+    }
+
+
+
+
+    .aboutMe {
+        position: absolute;
+        bottom: -10%;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        height: 15px;
+        line-height: 10px;
+
+    }
+
+
+    .aboutMe a {
+        font-size: 10px;
+
+    }
+
+    body {
+        max-width: 640px;
+    }
+}
+
+@media(min-width: 320px)and (max-width: 480px)and (orientation: portrait) {
+
+
+    h1,
+    h2 {
+        font-size: 12px;
+        width: 400px;
+    }
+
+    .hands {
+
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%) scale(40%);
+    }
+
+    .play {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translate(-50%) scale(55%);
+    }
+
+    .battle {
+        background-image: url(../r_p_s_project-game/images/backgroundTest_375x812.jpg);
+        background-position: center;
+        background-size: cover;
+
+        position: absolute;
+        top: 260px;
+        left: 50%;
+        transform: translate(-50%) scale(50%);
+        width: 620px;
+    }
+
+    .playerActive {
+        transform: translate(-30%);
+    }
+
+    .playerCrownSpot {
+        transform: translate(-60%);
+    }
+
+    .computerCrownSpot {
+        transform: translate(50%);
+    }
+
+    .statistics {
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%) scale(70%);
+    }
+
+    .aboutMe a {
+        font-size: 7px;
+    }
+
+    .aboutMe {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        line-height: 14px;
+        width: 100%;
+        height: 14px;
+        text-align: center;
+
+    }
+
+
+
+}
+
+
+/* mq do lumia/blackberry z only landscape small screen */
+/* 
+@media(min-width: 320px)and (max-width: 480px) and (orientation: landscape) {
+
+    .statistics {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        /* z-index: 5000; */
+
+/* html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+body {
+    max-height: 100%;
+    overflow-y: hidden;
+} */
