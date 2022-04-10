@@ -82,10 +82,7 @@ button:hover .fa-dice {
     background-position: center;
     cursor: pointer;
     transition: 0.5s linear;
-
     border-radius: 10 10 10 10;
-
-
 }
 
 
@@ -93,36 +90,36 @@ button:hover .fa-dice {
 
 
 .rock {
-    background-image: url(../r_p_s_project-game/images/rock_unselected_good.png);
+    background-image: url(/images/rock_unselected_good.png);
     transition: 1s;
 }
 
 .paper {
-    background-image: url(../r_p_s_project-game/images/paper_unselected_good.png);
+    background-image: url(/images/paper_unselected_good.png);
     transition: 1s;
 }
 
 .scissors {
-    background-image: url(../r_p_s_project-game/images/scissors_unselected_good.png);
+    background-image: url(/images/scissors_unselected_good.png);
     transition: 1s;
 }
 
 .rock:hover {
-    background-image: url(../r_p_s_project-game/images/rock_selected_good.png)
+    background-image: url(/images/rock_selected_good.png)
         /* width: 40%; */
         /* flex-grow: 1; */
 }
 
 
 .paper:hover {
-    background-image: url(../r_p_s_project-game/images/paper_selected_good.png);
+    background-image: url(/images/paper_selected_good.png);
     /* width: 40%; */
     /* flex-grow: 1; */
 
 }
 
 .scissors:hover {
-    background-image: url(../r_p_s_project-game/images/scissors_selected_good.png);
+    background-image: url(/images/scissors_selected_good.png);
     /* width: 40%; */
     /* flex-grow: 1; */
 }
@@ -138,7 +135,7 @@ button:hover .fa-dice {
     z-index: 99199;
     overflow: hidden;
     /* border: solid 8px black; */
-    background-image: url(../r_p_s_project-game/images/background_battle_desktop.jpg);
+    background-image: url(/images/background_battle_desktop.jpg);
     background-repeat: none;
     background-position: center;
 
@@ -172,7 +169,7 @@ p.computerTitle {
     height: 100%;
     left: 120%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/rock_cpu.png);
+    background-image: url(/images/rock_cpu.png);
     z-index: 104;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -185,7 +182,7 @@ p.computerTitle {
     height: 100%;
     left: 105%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/paper_cpu.png);
+    background-image: url(/images/paper_cpu.png);
     z-index: 103;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -198,7 +195,7 @@ p.computerTitle {
     height: 100%;
     left: 135%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/scissors_cpu.png);
+    background-image: url(/images/scissors_cpu.png);
     z-index: 103;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -211,7 +208,7 @@ p.computerTitle {
     height: 100%;
     left: -55%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/rock_player.png);
+    background-image: url(/images/rock_player.png);
     z-index: 104;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -224,7 +221,7 @@ p.computerTitle {
     height: 100%;
     left: -50%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/paper_player.png);
+    background-image: url(/images/paper_player.png);
     z-index: 104;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -237,7 +234,7 @@ p.computerTitle {
     height: 100%;
     left: -50%;
     top: 20%;
-    background-image: url(../r_p_s_project-game/images/scissors_player.png);
+    background-image: url(/images/scissors_player.png);
     z-index: 104;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -309,7 +306,7 @@ p.computerTitle {
 }
 
 .clickedRock {
-    background-image: url(../r_p_s_project-game/images/rock_selected_good.png);
+    background-image: url(/images/rock_selected_good.png);
     animation-name: movingChoice;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -319,7 +316,7 @@ p.computerTitle {
 }
 
 .clickedPaper {
-    background-image: url(../r_p_s_project-game/images/paper_selected_good.png);
+    background-image: url(/images/paper_selected_good.png);
     animation-name: movingChoice;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -331,7 +328,7 @@ p.computerTitle {
 }
 
 .clickedScissors {
-    background-image: url(../r_p_s_project-game/images/scissors_selected_good.png);
+    background-image: url(/images/scissors_selected_good.png);
     animation-name: movingChoice;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -422,7 +419,7 @@ p.computerTitle {
 
 .cpuWinsShow {
     position: absolute;
-    background-image: url(../r_p_s_project-game/images/3508754.png);
+    background-image: url(/images/3508754.png);
     background-size: 50px;
     top: 5%;
     left: 60%;
@@ -436,7 +433,7 @@ p.computerTitle {
 
 .playerWinsShow {
     position: absolute;
-    background-image: url(../r_p_s_project-game/images/3508754.png);
+    background-image: url(/images/3508754.png);
     background-size: 50px;
     top: 5%;
     left: 35%;
@@ -509,7 +506,7 @@ Media-Queries */
         left: 50%;
         transform: translate(-50%, -60%);
         width: 80%;
-        background-image: url(../r_p_s_project-game/images/backgroundTest1024x1366.jpg);
+        background-image: url(/images/backgroundTest1024x1366.jpg);
 
     }
 
@@ -603,7 +600,7 @@ Media-Queries */
 
     .hands {
 
-        transform: translate(0%, -20%)scale(80%);
+        transform: translate(0%, -20%) scale(80%);
 
     }
 
@@ -635,7 +632,7 @@ Media-Queries */
 
     .battle {
 
-        background-image: url(../r_p_s_project-game/images/backgroundTest_1024x768_landscape.jpg);
+        background-image: url(/images/backgroundTest_1024x768_landscape.jpg);
         position: absolute;
         top: 55vh;
         transform: translate(-50%, -50%);
@@ -682,6 +679,7 @@ Media-Queries */
 
     }
 
+
 }
 
 @media(min-width: 481px)and (max-width: 768px)and (orientation: portrait) {
@@ -725,7 +723,7 @@ Media-Queries */
     }
 
     .battle {
-        background-image: url(../r_p_s_project-game/images/background_battle_768x1024.jpg);
+        background-image: url(/images/background_battle_768x1024.jpg);
         background-position: center;
         background-size: cover;
         position: absolute;
@@ -981,7 +979,7 @@ Media-Queries */
     }
 
     .battle {
-        background-image: url(../r_p_s_project-game/images/backgroundTest_375x812.jpg);
+        background-image: url(/images/backgroundTest_375x812.jpg);
         background-position: center;
         background-size: cover;
 
