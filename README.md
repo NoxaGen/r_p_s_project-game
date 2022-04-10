@@ -2,7 +2,7 @@
 
 ROCK-PAPER-SCISSORS
 
-Hello im my first project, the project is very small and simple but i want to use some techniques i have learn in HTML/CSS and Javascript.
+Welcome in one of my first projects, the project is very small and simple but i want to use some techniques i have learn in HTML/CSS and Javascript.
 
 Rock Paper Scissors game is working on the browsers and it fully responsive on all devices with diffrent resolution.
 
