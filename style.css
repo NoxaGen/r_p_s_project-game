@@ -89,17 +89,17 @@ button:hover .fa-dice {
 
 
 .rock {
-    background-image: url(/Images/rock_unselected_good.png);
+    background-image: url(/Images/rock_unselected_good.PNG);
     transition: 1s;
 }
 
 .paper {
-    background-image: url(/Images/paper_unselected_good.png);
+    background-image: url(/Images/paper_unselected_good.PNG);
     transition: 1s;
 }
 
 .scissors {
-    background-image: url(/Images/scissors_unselected_good.png);
+    background-image: url(/Images/scissors_unselected_good.PNG);
     transition: 1s;
 }
 
