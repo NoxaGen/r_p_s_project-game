@@ -127,7 +127,7 @@ button:hover .fa-dice {
     z-index: 99199;
     overflow: hidden;
     /* border: solid 8px black; */
-    background-image: url(./images/background_battle_desktop.jpg);
+    background-image: url(./Images/background_battle_desktop.jpg);
     background-repeat: none;
     background-position: center;
 
