@@ -89,17 +89,17 @@ button:hover .fa-dice {
 
 
 .rock {
-    background-image: url(/images/rock_unselected_good.png);
+    background-image: url(../images/rock_unselected_good.png);
     transition: 1s;
 }
 
 .paper {
-    background-image: url(/images/paper_unselected_good.png);
+    background-image: url(../images/paper_unselected_good.png);
     transition: 1s;
 }
 
 .scissors {
-    background-image: url(/images/scissors_unselected_good.png);
+    background-image: url(../images/scissors_unselected_good.png);
     transition: 1s;
 }
 
@@ -127,7 +127,7 @@ button:hover .fa-dice {
     z-index: 99199;
     overflow: hidden;
     /* border: solid 8px black; */
-    background-image: url(/images/background_battle_desktop.jpg);
+    background-image: url(../images/background_battle_desktop.jpg);
     background-repeat: none;
     background-position: center;
 
