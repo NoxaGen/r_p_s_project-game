@@ -89,7 +89,7 @@ button:hover .fa-dice {
 
 
 .rock {
-    background-image: url(../images/rock_unselected_good.png);
+    background-image: url(../images/rock_unselected_good.PNG);
     transition: 1s;
 }
 
