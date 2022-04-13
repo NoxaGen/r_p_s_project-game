@@ -60,7 +60,6 @@ button:hover .fa-dice {
     animation-timing-function: ease-in-out;
 }
 
-
 .hands {
 
     display: flex;
@@ -83,10 +82,6 @@ button:hover .fa-dice {
     transition: 0.5s linear;
     border-radius: 10 10 10 10;
 }
-
-
-
-
 
 .rock {
     background-image: url(./Images/rock_unselected_good.png);
@@ -120,20 +115,14 @@ button:hover .fa-dice {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    /* margin-top: 5px; */
     width: 100%;
     height: 220px;
-    /* background-color: skyblue; */
-    z-index: 99199;
+    z-index: 2000;
     overflow: hidden;
-    /* border: solid 8px black; */
     background-image: url(./Images/background_battle_desktop.jpg);
     background-repeat: none;
     background-position: center;
-
 }
-
-/* podpisy stron, w malych testach user nie wiedzial ktora strona czyja */
 
 p.playerTitle,
 p.computerTitle {
@@ -388,17 +377,15 @@ p.computerTitle {
 .playerCrownSpot {
     position: absolute;
     transition: 3s;
-    top: 150%;
-    left: 810%;
-    transform: translate(-50%, -50%);
+    top: -50%;
+    left: 30%;
 }
 
 .computerCrownSpot {
 
     transition: 3s;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -50%;
+    left: 60%;
 }
 
 
@@ -418,9 +405,9 @@ p.computerTitle {
     position: absolute;
     background-image: url(./Images/3508754.png);
     background-size: 50px;
-    top: 15%;
-    left: 50%;
-    transform: translate(50%, 20%);
+    top: 5%;
+    left: -10%;
+    transform: translate(55%, 0%);
     z-index: 110;
     width: 50px;
     height: 50px;
@@ -461,34 +448,29 @@ button:hover .fa-undo {
     font-size: 20px;
 }
 
-/* Layout budowany od large-screen do small devices
-Media-Queries */
+/* layout build from desktop to mobile devices */
 
-/* @media (max-width: 1024px) {} layout zachowuje sie dosc przyjemnie, narazie bez zmian */
+/* big screen and desktop in portrait type of resolution and tablets with big resolution */
 
+/* looking good */
 @media (orientation: portrait) {
     h1 {
         margin-top: 10px
     }
 
-
     .battle {
-
         position: absolute;
         top: 50vh;
         left: 50%;
         transform: translate(-50%, -60%);
         width: 80%;
         background-image: url(./Images/backgroundTest1024x1366.jpg);
-
     }
 
     .statistics {
         position: absolute;
         top: 45vh;
-
         font-size: 20px;
-
     }
 
     .playerActive {
@@ -504,14 +486,7 @@ Media-Queries */
     }
 }
 
-
-
 @media(min-width: 769px)and (max-width: 1024px) and (orientation: portrait) {
-
-
-
-
-
     .hands {
         height: 240px;
         width: 100vw;
@@ -545,11 +520,7 @@ Media-Queries */
 }
 
 .playerWinsShow {
-
-
     left: 30%;
-
-
 }
 
 .cpuWinsShow {
@@ -560,21 +531,10 @@ Media-Queries */
     font-size: 1.3em;
 }
 
-
-
-
-
-
 @media(min-width: 769px)and (max-width: 1024px) and (orientation: landscape) {
 
-
-
-
-
     .hands {
-
         transform: translate(0%, -20%) scale(80%);
-
     }
 
     .play {
@@ -583,8 +543,6 @@ Media-Queries */
         left: 50%;
         transform: translate(-50%) scale(70%);
     }
-
-
 
     h1,
     h2 {
@@ -601,7 +559,6 @@ Media-Queries */
     body {
         position: relative;
     }
-
 
     .battle {
 
@@ -632,8 +589,6 @@ Media-Queries */
         top: 300px;
     }
 
-
-
     .aboutMe a {
         font-size: 0.8rem;
     }
@@ -652,12 +607,9 @@ Media-Queries */
 
     }
 
-
 }
 
 @media(min-width: 481px)and (max-width: 768px)and (orientation: portrait) {
-
-
 
     h1,
     h2 {
@@ -728,18 +680,9 @@ Media-Queries */
     .playerCrownSpot {
         transform: translate(-130%);
     }
-
-
-
 }
 
-
 @media(min-width: 481px)and (max-width: 768px)and (orientation: landscape) {
-
-    /* h1 {
-        text-align: left;
-        float: left;
-    } */
 
     h1,
     h2 {
@@ -804,9 +747,6 @@ Media-Queries */
         transform: translate(-130%);
     }
 
-
-
-
     .aboutMe {
         position: absolute;
         bottom: -10%;
@@ -817,7 +757,6 @@ Media-Queries */
         line-height: 10px;
 
     }
-
 
     .aboutMe a {
         font-size: 10px;
