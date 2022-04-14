@@ -78,21 +78,23 @@ button:hover .fa-dice {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transition: 1s linear;
-    border-radius: 10 10 10 10;
+    /* transition: 1s linear; */
+    border-radius: 10;
 }
 
 .rock {
     background-image: url(./Images/rock_unselected_good.png);
-    /* transition: 1s; */
+    transition: 1s;
 }
 
 .paper {
     background-image: url(./Images/paper_unselected_good.png);
+    transition: 1s;
 }
 
 .scissors {
     background-image: url(./Images/scissors_unselected_good.png);
+    transition: 1s;
 }
 
 .rock:hover {
@@ -234,6 +236,7 @@ p.computerTitle {
     left: 0%;
     right: 0%;
     width: 100%;
+    max-width: 100%;
     height: 35px;
     line-height: 35px;
     background-color: black;
@@ -467,9 +470,12 @@ button:hover .fa-undo {
         top: 45vh;
     }
 
-    .statistics>h1,
+    .statistics>h1 {
+        font-size: 50px;
+    }
+
     .statistics>p {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .playerActive {
@@ -771,99 +777,86 @@ button:hover .fa-undo {
     }
 }
 
-/* zapytanie do iphone-x itp */
+/* queries for iphone-x etc. landscape */
 
 @media(min-width: 769px)and (max-width: 1024px) and (max-device-height: 375px) and (orientation: landscape) {
-
-    h1,
-    h2 {
-        transform: scale(40%);
-        display: inline-block;
-        width: 100vw;
+    h1 {
+        position: absolute;
+        top: 0%;
+        left: 10%;
     }
 
     h2 {
         position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translate(-50%) scale(50%);
+        top: 10%;
+        left: 5%;
     }
 
     .hands {
-
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translate(-50%) scale(50%);
-
+        transform: translate(-15%, -10%) scale(60%);
     }
 
     .play {
-        position: absolute;
-        top: 170px;
-        left: 24.5%;
-        transform: scale(50%);
+        transform: translate(-230%, -130%) scale(50%);
     }
 
     .battle {
-        position: absolute;
-        top: 175px;
-        left: -19%;
-        transform: scale(45%);
-        width: 100%;
+        transform: translate(-68%, -14%) scale(60%);
     }
 
     .statistics {
         position: absolute;
-        bottom: 20%;
-        left: 80%;
-        transform: translate(-50%);
-        font-size: 0.8rem;
+        top: -100px;
+        left: 630px;
+        font-size: 0.5rem;
+        text-align: left;
+        width: 200px;
     }
 
-    .playerActive {
-        transform: translate(-35%);
+    .statistics>h1 {
+        position: absolute;
+        top: -80px;
+        left: 0px;
+        font-size: 2rem;
+
     }
 
-    .computerActive {
-        transform: translate(8%);
-    }
-
-    .computerCrownSpot {
-        transform: translate(80%);
-    }
-
-    .playerCrownSpot {
-        transform: translate(-130%);
+    .statistics>p {
+        text-align: left;
     }
 
     .aboutMe {
-        position: absolute;
-        bottom: -10%;
-        overflow: hidden;
-        margin: 0px;
-        padding: 0px;
-        height: 15px;
-        line-height: 10px;
+        max-width: 100vw;
+        bottom: 0px;
 
     }
 
-    .aboutMe a {
-        font-size: 10px;
-
-    }
+    /* trying to block screen movement in small mobiles */
 
     body {
-        max-width: 640px;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
     }
 }
 
 @media(min-width: 320px)and (max-width: 480px)and (orientation: portrait) {
+    /* trying to block movement of the screen on mobile screens */
+
+    body {
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
 
     h1,
     h2 {
         font-size: 12px;
         width: 400px;
+    }
+
+    .statistics>h1 {
+        font-size: 1.5rem;
     }
 
     .hands {
@@ -903,7 +896,7 @@ button:hover .fa-undo {
     }
 
     .computerCrownSpot {
-        transform: translate(50%);
+        transform: translate(140%, 0%);
     }
 
     .statistics {
@@ -926,28 +919,3 @@ button:hover .fa-undo {
         text-align: center;
     }
 }
-
-
-/* mq do lumia/blackberry z only landscape small screen */
-/* 
-@media(min-width: 320px)and (max-width: 480px) and (orientation: landscape) {
-
-    .statistics {
-        position: absolute;
-        top: 150%;
-        left: 50%;
-        /* z-index: 5000; */
-
-/* html {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-body {
-    overflow: hidden;
-}
-
-body {
-    max-height: 100%;
-    overflow-y: hidden;
-} */
