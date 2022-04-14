@@ -2,6 +2,8 @@
 
 ROCK-PAPER-SCISSORS
 
+ https://noxagen.github.io/r_p_s_project-game/
+
 Welcome in one of my first projects, the project is very small and simple but i want to use some techniques i have learn in HTML/CSS and JavaScript.
 
 Rock Paper Scissors game is working on the browsers and it fully responsive on all devices with diffrent resolution.
