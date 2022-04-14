@@ -61,7 +61,6 @@ button:hover .fa-dice {
 }
 
 .hands {
-
     display: flex;
     flex-direction: row;
     height: 280px;
@@ -79,29 +78,26 @@ button:hover .fa-dice {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transition: 0.5s linear;
+    transition: 1s linear;
     border-radius: 10 10 10 10;
 }
 
 .rock {
     background-image: url(./Images/rock_unselected_good.png);
-    transition: 1s;
+    /* transition: 1s; */
 }
 
 .paper {
     background-image: url(./Images/paper_unselected_good.png);
-    transition: 1s;
 }
 
 .scissors {
     background-image: url(./Images/scissors_unselected_good.png);
-    transition: 1s;
 }
 
 .rock:hover {
     background-image: url(./Images/rock_selected_good.png)
 }
-
 
 .paper:hover {
     background-image: url(./Images/paper_selected_good.png);
@@ -202,7 +198,7 @@ p.computerTitle {
     height: 100%;
     left: -50%;
     top: 20%;
-    background-image: url(/Images/paper_player.png);
+    background-image: url(./Images/paper_player.png);
     z-index: 104;
     background-repeat: no-repeat;
     background-size: 150px;
@@ -382,12 +378,10 @@ p.computerTitle {
 }
 
 .computerCrownSpot {
-
     transition: 3s;
     top: -50%;
     left: 60%;
 }
-
 
 .cpuWinsShow {
     position: absolute;
@@ -772,8 +766,6 @@ button:hover .fa-undo {
 
 @media(min-width: 769px)and (max-width: 1024px) and (max-device-height: 375px) and (orientation: landscape) {
 
-
-
     h1,
     h2 {
         transform: scale(40%);
@@ -786,10 +778,7 @@ button:hover .fa-undo {
         top: 20px;
         left: 50%;
         transform: translate(-50%) scale(50%);
-
     }
-
-
 
     .hands {
 
@@ -839,9 +828,6 @@ button:hover .fa-undo {
         transform: translate(-130%);
     }
 
-
-
-
     .aboutMe {
         position: absolute;
         bottom: -10%;
@@ -852,7 +838,6 @@ button:hover .fa-undo {
         line-height: 10px;
 
     }
-
 
     .aboutMe a {
         font-size: 10px;
@@ -865,7 +850,6 @@ button:hover .fa-undo {
 }
 
 @media(min-width: 320px)and (max-width: 480px)and (orientation: portrait) {
-
 
     h1,
     h2 {
@@ -894,7 +878,6 @@ button:hover .fa-undo {
         background-image: url(./Images/backgroundTest_375x812.jpg);
         background-position: center;
         background-size: cover;
-
         position: absolute;
         top: 260px;
         left: 50%;
@@ -932,11 +915,7 @@ button:hover .fa-undo {
         width: 100%;
         height: 14px;
         text-align: center;
-
     }
-
-
-
 }
 
 
