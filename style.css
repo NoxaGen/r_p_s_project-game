@@ -447,6 +447,7 @@ button:hover .fa-undo {
 /* big screen and desktop in portrait type of resolution and tablets with big resolution */
 
 /* looking good */
+
 @media (orientation: portrait) {
     h1 {
         margin-top: 10px
@@ -464,7 +465,11 @@ button:hover .fa-undo {
     .statistics {
         position: absolute;
         top: 45vh;
-        font-size: 20px;
+    }
+
+    .statistics>h1,
+    .statistics>p {
+        font-size: 1.8rem;
     }
 
     .playerActive {
@@ -477,6 +482,10 @@ button:hover .fa-undo {
 
     .aboutMe {
         width: 100%;
+    }
+
+    .playerWinsShow {
+        transform: translate(-10%, 0);
     }
 }
 
