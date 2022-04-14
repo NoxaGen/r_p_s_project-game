@@ -910,12 +910,8 @@ button:hover .fa-undo {
     }
 
     .aboutMe {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-        line-height: 14px;
-        width: 100%;
+        bottom: 0px;
         height: 14px;
-        text-align: center;
+        line-height: 7px;
     }
 }
