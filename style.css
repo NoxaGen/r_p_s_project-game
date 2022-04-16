@@ -975,12 +975,12 @@ button:hover .fa-undo {
     }
 
     /* trying to block screen movement in small mobiles */
-
+    /* 
     body {
         max-width: 100vw;
         max-height: 100vh;
         overflow-x: hidden !important;
         overflow-y: hidden !important;
-    }
+    } */
 
 }
