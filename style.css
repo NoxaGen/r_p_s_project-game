@@ -845,6 +845,8 @@ button:hover .fa-undo {
 @media(min-width: 320px)and (max-width: 480px)and (orientation: portrait) {
     /* trying to block movement of the screen on mobile screens */
 
+
+
     body {
         overflow-x: hidden !important;
         overflow-y: hidden !important;
@@ -852,7 +854,7 @@ button:hover .fa-undo {
 
     h1,
     h2 {
-        font-size: 12px;
+        font-size: 0.5rem;
         width: 400px;
     }
 
@@ -861,20 +863,17 @@ button:hover .fa-undo {
     }
 
     .hands {
-
         position: absolute;
-        top: 0px;
+        top: -100%;
         left: 50%;
-        top: 10px;
-        left: 50%;
-        transform: translate(-50%) scale(40%);
+        transform: translate(-50%) scale(30%);
     }
 
     .play {
         position: absolute;
-        top: 220px;
+        top: 110px;
         left: 50%;
-        transform: translate(-50%) scale(55%);
+        transform: translate(-50%) scale(45%);
     }
 
     .battle {
@@ -882,9 +881,9 @@ button:hover .fa-undo {
         background-position: center;
         background-size: cover;
         position: absolute;
-        top: 260px;
+        top: 115px;
         left: 50%;
-        transform: translate(-50%) scale(50%);
+        transform: translate(-50%) scale(40%);
         width: 620px;
     }
 
@@ -902,8 +901,8 @@ button:hover .fa-undo {
 
     .statistics {
         position: absolute;
-        bottom: 0;
-        transform: translate(-50%) scale(70%);
+        bottom: 30%;
+        transform: translate(-50%) scale(50%);
     }
 
     .aboutMe a {
@@ -914,6 +913,7 @@ button:hover .fa-undo {
         bottom: 0px;
         height: 14px;
         line-height: 7px;
+        max-width: 100vw;
     }
 }
 
