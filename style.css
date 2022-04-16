@@ -720,12 +720,16 @@ button:hover .fa-undo {
     .play {
         position: absolute;
         top: 170px;
-        left: 24.5%;
+        left: 25%;
         transform: scale(50%);
     }
 
     .battle {
         position: absolute;
+        background-image: url(./Images/backgroundTest_667x375_ls.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         top: 175px;
         left: -19%;
         transform: scale(50%);
@@ -738,6 +742,10 @@ button:hover .fa-undo {
         left: 80%;
         transform: translate(-50%);
         font-size: 0.8rem;
+    }
+
+    .statistics>h1 {
+        font-size: 2rem;
     }
 
     .playerActive {
@@ -780,6 +788,7 @@ button:hover .fa-undo {
 /* queries for iphone-x etc. landscape */
 
 @media(min-width: 769px)and (max-width: 1024px) and (max-device-height: 375px) and (orientation: landscape) {
+
 
     h1 {
         position: absolute;
