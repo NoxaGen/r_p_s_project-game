@@ -12,12 +12,15 @@ I'm tried to make game full responsive, but in some cases its does not act like 
 Examples: 
 
 Desktop and tablets:
+
  ![rps_game_screen](https://user-images.githubusercontent.com/87094041/163668620-67316c7d-7394-4a3d-b231-cab8b2034577.jpg)
 
  Small devices like smartphone portrait:
+
 ![mobile look](https://user-images.githubusercontent.com/87094041/163671874-68c3ab11-ec32-4da9-adfa-e5fea9573ba3.jpg)
 
 Smartphones but landscape:
+
 ![mobile_landscape](https://user-images.githubusercontent.com/87094041/163671875-07c3eaa2-b634-48b0-b070-1a427d0de076.jpg)
 
 Welcome in one of my first projects, the project is very small and simple but i want to use some techniques i have learn in HTML/CSS and JavaScript.
