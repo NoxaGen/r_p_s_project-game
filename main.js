@@ -48,14 +48,7 @@ const battleTable = document.querySelector(".battle");
 let clickCheck = false;
 let matchOver = false;
 
-
-
-
-
-
-
-
-// ponizsze zmienic z togglem, lub wyprobowac zrobic toggle+for pętla
+// i can't use toggle switch with loop because of diffrent claess names x2
 
 rock.addEventListener('click', function () {
 
@@ -75,7 +68,8 @@ rock.addEventListener('click', function () {
     }
 
 });
-// moge ulepszyc to za pomoca petli i czyszczenia classy WELLSEE
+
+// i think i cannot use foreach looop because of diffrent class names
 paper.addEventListener('click', function () {
     paper.classList.toggle('clickedPaper');
     rock.classList.remove('clickedRock');
@@ -106,18 +100,15 @@ scissors.addEventListener('click', function () {
 
     } else {
         clickCheck = false;
-        // starterBtn.disabled = true;
     }
 
 
 });
-//po nacisnieciu usuwa wszystkie klasy i robi czyszczenie hands
+
 starterBtn.addEventListener('click', function () {
     scissors.classList.remove('clickedScissors');
     paper.classList.remove('clickedPaper');
     rock.classList.remove('clickedRock');
-
-
 
     if (blueRock == true) {
         playerRock.classList.add("playerActive")
@@ -129,24 +120,17 @@ starterBtn.addEventListener('click', function () {
         playerScissors.classList.add("playerActive")
     }
 
-
-
-
 });
 
-// ponizej 'AI' komputera oparty na losowym wyborze z tablicy
+// below is someking of AI, wich work totaly random
 
 const playGame = () => {
-
-
 
     if (clickCheck == true) {
 
         // starterBtn.disabled = false;
         gamesCounter++;
         numberOfGames.textContent = gamesCounter;
-
-
 
         const index = (Math.floor(Math.random() * redHands.length));
 
@@ -180,9 +164,6 @@ const playGame = () => {
         alert("Zanim zagrasz musisz zaznaczyć którąś z opcji :)")
         clickCheck = false;
 
-        //Nie można było zrobić 1 klasy 'clicked' bo po clicku renderuje nowy obrazek z innym kolorem i większym rozmiarem
-        //JEDNAK INNY ARAY -> trzeba usunąc wszystkie klasy playerActive! (blueHands array)
-
         blueHands.forEach(blueHand => {
             blueHand.classList.remove('playerActive');
         });
@@ -192,9 +173,6 @@ const playGame = () => {
     theWinnerIs()
 };
 
-
-// trzeba NAPISAC 3 rozne FUNKCJE i wprowadzic IF statment przy wyborze playera u gory 
-//bo booleany beda sie gryzly 
 const showWinner = () => {
 
     if (blueRock) {
@@ -281,17 +259,14 @@ const showWinner = () => {
 
 }
 
-// funkcja do buttona czyszczaca pole bitwy i zerujaca booleany
+// function wich clean battleground and change booleans
 const clearBattle = () => {
-    // rock.classList.remove('clickedRock');
-    // paper.classList.remove('clickedPaper');
-    // scissors.classList.remove('clickedScissors')
     playerCrownSpot.classList.remove("playerWinsShow");
     computerCrownSpot.classList.remove("cpuWinsShow");
     drawSign.classList.remove("drawSignActive");
     starterBtn.disabled = false;
 
-    // 2 x petla by usunac active klasy
+    // double loop for remove diffrent class names
 
     for (i = 0; i < blueHands.length; i++) {
         blueHands[i].classList.remove('playerActive')
@@ -301,35 +276,18 @@ const clearBattle = () => {
         redHands[i].classList.remove('computerActive')
     };
 
-    // for (i = 0; i < clickedList.length; i++) {
-    //     clickedList[i].classList.remove('')
-    // }
-
-
-    // const result = redHands[index];
-
-    // result.classList.add("computerActive");
-
-
     matchOver = false;
     resBtn.classList.remove("restartActive");
-
 
     starterBtn.disabled = false;
     clickCheck = false;
 
-
-
     rock.classList.remove('clickedRock');
     paper.classList.remove('clickedPaper');
     scissors.classList.remove('clickedScissors')
-
-
 }
 
 const theWinnerIs = () => {
-
-
 
     if (gamesCounter === 0) {
         whoIsWinning.textContent = "-";
@@ -343,9 +301,6 @@ const theWinnerIs = () => {
             whoIsWinning.textContent = "Komputer";
         }
     }
-
-
-
 }
 starterBtn.addEventListener('click', playGame);
 
