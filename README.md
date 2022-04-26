@@ -7,6 +7,13 @@ You can try it here:
 
  https://noxagen.github.io/r_p_s_project-game/
 
+ ALSO IS NEW VERSION with no animations, LESS CSS but BETTER JAVASCRIPT
+ (all diffrences are on the down of README file)
+
+ Try it here:
+
+ https://noxagen.github.io/r_p_s-project-V2-new-engine/
+
 I'm tried to make game full responsive, but in some cases its does not act like I want to, i will try improve view of each devices on incoming days.
 
 Examples: 
@@ -37,3 +44,9 @@ Every advice and feedback are welcome and enjoy playing the game :)
 
 With Regards,
 Wiktor Augustyniak - NoxaGen
+
+OLD CODE vs NEW CODE
+
+![evo1](https://user-images.githubusercontent.com/87094041/165297750-f72c2a8a-ce7b-4a98-9bc8-7e319e53bada.png)
+![evo2](https://user-images.githubusercontent.com/87094041/165297753-4e970838-d48f-43b7-8bb4-63a55e43b4f9.png)
+![evo3](https://user-images.githubusercontent.com/87094041/165297755-3faa53b3-8659-45bb-a8d6-f0f4530141f4.png)
