@@ -25,18 +25,16 @@ const blueHands = [playerRock, playerPaper, playerScissors];
 const redHandsActive = [redRock, redPaper, redScissors];
 const clickedList = [rock, paper, scissors];
 
-let whoIsWinning = document.querySelector('p:first-child span');
-let numberOfGames = document.querySelector('p:nth-child(2) span');
-let winsByPlayer = document.querySelector('p:nth-child(3) span');
-let winsByComputer = document.querySelector('p:nth-child(4) span');
+let whoIsWinning = document.querySelector('p:nth-child(2) span');
+let numberOfGames = document.querySelector('p:nth-child(3) span');
+let winsByPlayer = document.querySelector('p:nth-child(4) span');
+let winsByComputer = document.querySelector('p:nth-child(5) span');
 let draws = document.querySelector('p:last-child span');
 
 let gamesCounter = 0;
 let winGamesCounter = 0;
 let lostGamesCounter = 0;
 let drawCounter = 0;
-
-
 
 const cpuWins = document.querySelector(".cpuWins");
 const playerWins = document.querySelector(".playerWins");
@@ -101,7 +99,6 @@ scissors.addEventListener('click', function () {
     } else {
         clickCheck = false;
     }
-
 
 });
 
@@ -288,20 +285,16 @@ const clearBattle = () => {
 }
 
 const theWinnerIs = () => {
+    if (winGamesCounter > lostGamesCounter) {
+        whoIsWinning.textContent = "Gracz";
 
-    if (gamesCounter === 0) {
-        whoIsWinning.textContent = "-";
-    } else if (gamesCounter !== 0) {
-        if (winGamesCounter > lostGamesCounter) {
-            whoIsWinning.textContent = "Gracz";
-
-        } else if (winGamesCounter == lostGamesCounter) {
-            whoIsWinning.textContent = "Remis";
-        } else if (winGamesCounter < lostGamesCounter) {
-            whoIsWinning.textContent = "Komputer";
-        }
+    } else if (winGamesCounter == lostGamesCounter) {
+        whoIsWinning.textContent = "Remis";
+    } else if (winGamesCounter < lostGamesCounter) {
+        whoIsWinning.textContent = "Komputer";
     }
 }
+
 starterBtn.addEventListener('click', playGame);
 
 resBtn.addEventListener('click', clearBattle);
